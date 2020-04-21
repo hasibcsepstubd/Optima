@@ -75,7 +75,7 @@
 
 					<div class="container">
 						<!-- Start Atribute Navigation -->
-						<div class="attr-nav">
+						<!-- <div class="attr-nav">
 							<ul>
 								<li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
 								<li class="dropdown">
@@ -101,7 +101,7 @@
 									</ul>
 								</li>
 							</ul>
-						</div>
+						</div> -->
 						<!-- End Atribute Navigation -->
 
 						<!-- Start Header Navigation -->
@@ -115,7 +115,18 @@
 
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="navbar-menu">
-							<ul class="nav navbar-nav navbar-right" data-in="" data-out="">
+							
+						<?php
+							wp_nav_menu(
+								array(
+									'theme_location' => 'menu-1',
+									'menu_id'        => 'primary-menu',
+									'menu_class'	=>'nav navbar-nav navbar-right',
+								)
+							);
+						?>
+							
+							<!-- <ul class="nav navbar-nav navbar-right" data-in="" data-out="">
 								<li class="active"><a href="index.html">Home</a></li>
 								<li><a href="about.html">About Us</a></li>
 								<li><a href="services.html">Services</a></li>
@@ -135,7 +146,7 @@
 									</ul>
 								</li>
 								<li><a href="contact.html">Contact</a></li>
-							</ul>
+							</ul> -->
 						</div><!-- /.navbar-collapse -->
 					</div>
 				</nav>
